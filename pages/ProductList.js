@@ -18,10 +18,11 @@ function ProductList() {
       {productList.map((elem) => {
         return (
             <Grid item xs={4}>
-          <ProductCard
+          <ProductCard key = {elem.id}
             title={elem.title}
             image={elem.image}
             price={elem.price}
+            id = {elem.id}
           ></ProductCard>
         </Grid>
           
