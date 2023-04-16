@@ -3,9 +3,12 @@
 }
 
 .header{
+   
     padding-right: 7px;
 }
 
 .name{
-    margin-left: auto;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
 }

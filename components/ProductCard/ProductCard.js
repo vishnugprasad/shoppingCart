@@ -16,9 +16,9 @@ function ProductCard({ title, image, price, id }) {
       <CardHeader title={title} height = "50"  className= {styles.header}/>
       <CardMedia component="img" height="194" image={image} alt="image" />
 
-      <CardActions disableSpacing>
+      <CardActions disableSpacing className ={styles.container}>
         <Typography >Price: {price}</Typography>
-        <Button variant="contained" startIcon={<ShoppingCartIcon />} className ={styles.container}
+        <Button variant="contained" startIcon={<ShoppingCartIcon />} 
         onClick={()=>addToCart({title, url: image, price, id})}>
           Add to Cart
         </Button>
