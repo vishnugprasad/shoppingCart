@@ -3,6 +3,8 @@ import axios from "axios";
 import ProductCard from "../components/ProductCard/ProductCard";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
+import styles from './ProductList.module.scss';
+
 
 function ProductList() {
   const [productList, setProductList] = useState([]);
@@ -13,7 +15,7 @@ function ProductList() {
     });
   }, []);
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={styles.container}>
         <Grid container spacing = {2} >
       {productList.map((elem) => {
         return (

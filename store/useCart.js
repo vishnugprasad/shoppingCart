@@ -13,7 +13,7 @@ const useCart = create((set) => ({
         cart: {
           ...state.cart, [item.id]: {...state.cart[item.id], count: count}
         },
-        totalPrice : state.totalPrice + item.price
+        totalPrice : round(state.totalPrice + item.price,2)
       }
     )
    }
@@ -22,7 +22,7 @@ const useCart = create((set) => ({
       cart: {
         ...state.cart, [item.id]: {count: 1, price: item.price, imageUrl : item.url, title : item.title, id:item.id }
       },
-      totalPrice : state.totalPrice + item.price
+      totalPrice : round(state.totalPrice + item.price,2)
     }
    )
   }),

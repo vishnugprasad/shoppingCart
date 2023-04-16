@@ -1,0 +1,28 @@
+.container{
+    min-width: 24%;
+}
+
+.card {
+    display: flex;
+     flex: 1 0 1;
+}
+
+.box {
+    display: flex; 
+    flex-direction: column;
+}
+
+.cardContent {
+    flex: 1 0 auto;
+}
+
+.boxActions {
+    display: flex;
+     align-items: center;
+     
+}
+
+.quantity {
+    align-self: center;
+    white-space: nowrap;
+}

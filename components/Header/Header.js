@@ -7,27 +7,26 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import styles from './Header.module.scss';
+import { useAppContext } from '../../appContext';
 
 
 
 function Header() {
+  const appContext = useAppContext()
+  console.log(appContext);
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={ styles.container }>
     <AppBar position="static">
       <Toolbar>
       
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          META CART
+        <Typography variant="h6" component="div" className={styles.header}>
+          META CART 
         </Typography>
-        <IconButton
-          size="large"
-          edge="start"
-          color="inherit"
-          aria-label="menu"
-          sx={{ mr: 2 }}
-        >
+        
           <ShoppingCartIcon />
-        </IconButton>
+          <Typography component="div" className={styles.name}>{appContext.name}</Typography>
+       
       </Toolbar>
     </AppBar>
   </Box>
